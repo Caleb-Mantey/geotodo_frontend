@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Row, Col, Jumbotron } from 'reactstrap';
+import Navbar  from './component/navbar'
+import TodoList from './component/todo-list';
+import AddTodo from './component/add-todo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar/>
+        <Jumbotron>
+          <Container>
+            <Row>
+              <Col>
+                <AddTodo/>
+              </Col>
+              <Col>
+                <TodoList/>
+              </Col>
+            </Row>
+          </Container>
+        </Jumbotron>
     </div>
   );
 }
