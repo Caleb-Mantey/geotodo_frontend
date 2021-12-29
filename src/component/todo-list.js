@@ -71,6 +71,7 @@ class TodoList extends Component {
   componentWillUpdate() {
     this.getTodos();
   }
+  //
 
   render() {
     return (
